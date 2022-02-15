@@ -1,0 +1,192 @@
+@import "../../node_modules/view-design/src/styles/custom";
+@import "../../node_modules/view-design/src/styles/mixins/index";
+@import "../../node_modules/view-design/src/styles/common/index";
+@import "../../node_modules/view-design/src/styles/animation/index";
+@import "../../node_modules/view-design/src/styles/components/date-picker";
+@import "../../node_modules/view-design/src/styles/components/time-picker";
+@import "../../node_modules/view-design/src/styles/components/select-dropdown";
+@import "../../node_modules/view-design/src/styles/components/modal";
+@import "../../node_modules/view-design/src/styles/components/table";
+@import "../../node_modules/view-design/src/styles/components/checkbox";
+@import "../../node_modules/view-design/src/styles/components/radio";
+@import "../../node_modules/view-design/src/styles/components/collapse";
+@import "../../node_modules/view-design/src/styles/components/form";
+@import "../../node_modules/view-design/src/styles/components/select";
+@import "../../node_modules/view-design/src/styles/components/button";
+@import "../../node_modules/view-design/src/styles/components/transfer";
+@import "../../node_modules/view-design/src/styles/components/input";
+
+
+@primary-color: #6da2f9;
+
+.ivu-modal-content {
+    border-radius: 0;
+}
+
+.ivu-modal-header {
+    padding: 0;
+}
+
+.ivu-modal-close {
+    right: 5px;
+    top: 5px;
+
+    .ivu-icon-ios-close {
+        color: #444
+    }
+}
+
+.ivu-table-header thead tr th {
+    padding: 0;
+    height: 30px;
+    background: #c2c2c2;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.ivu-table td {
+    padding: 0;
+    height: 28px;
+    font-size: 12px;
+}
+
+.ivu-table-sort i {
+    color: #000
+}
+
+.ivu-select-input {
+    padding-left: 0;
+}
+
+.ivu-collapse {
+    border: none;
+
+    > .ivu-collapse-item {
+        margin-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+
+        > .ivu-collapse-header {
+            background: #eeedf2;
+            color: #212529;
+            line-height: 35px;
+            height: 35px;
+            text-transform: capitalize;
+            padding: 0 12px;
+
+            > i {
+                position: absolute;
+                right: 0;
+                font-size: 18px;
+                line-height: 35px;
+                transform: rotate(-90deg);
+            }
+        }
+
+        .ivu-collapse-content {
+            padding-top: 30px;
+            color: #333;
+        }
+    }
+}
+
+.ivu-table-cell {
+    padding-left: 7px;
+    padding-right: 7px;
+    overflow: visible;
+}
+
+.ivu-radio-group {
+    padding: 0;
+    .ivu-radio-wrapper {
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.ivu-select {
+    color: #555;
+    font-size: 13px;
+}
+.ivu-select-single {
+    .ivu-select-selection {
+        box-shadow: none;
+        border: none;
+        line-height: 38px;
+        height: 38px;
+        border-radius: 0;
+        border-bottom: 1px solid #c7c7c7;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        .ivu-select-placeholder,
+        .ivu-select-selected-value {
+            line-height: 38px;
+            height: 38px;
+            font-size: 13px;
+            padding-left: 0;
+        }
+        &.ivu-select-selection-focused {
+            border-color: #4285f4;
+            box-shadow: 0 1px 0 0 #4285f4;
+        }
+    }
+}
+
+.ivu-input {
+    color: #555;
+    background-color: transparent;
+    font-size: 13px;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #c7c7c7;
+    height: 38px;
+    padding: 7px 0 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+    &:hover {
+        border-bottom: 1px solid #c7c7c7;
+    }
+    &:focus {
+        border-color: #4285f4;
+        box-shadow: 0 1px 0 0 #4285f4;
+        + label {
+            transform: translateY(-11px) scale(0.8);
+            color: #4285f4;
+        }
+    }
+    &:disabled {
+        color: lighten(#555, 30%);
+        + .label {
+            color: lighten(#555, 30%);
+        }
+    }
+}
+
+.ivu-table-cell {
+    word-break: normal;
+}
+
+.ivu-select-disabled .ivu-select-selection {
+    background-color: #fff;
+    color: #555;
+}
+
+.ivu-select-input[disabled] {
+    color: #555;
+    -webkit-text-fill-color: #555;
+}
+
+.ivu-input:disabled {
+    color: #555;
+    background: transparent;
+    &:focus {
+        outline: none;
+    }
+}
+
+.ivu-table,
+.ivu-table-wrapper {
+    overflow: auto;
+}

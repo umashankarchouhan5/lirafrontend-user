@@ -1,0 +1,6 @@
+{
+    "auth": true,
+    "status": true,
+    "code": 200,
+    "data": 'All data'
+}
